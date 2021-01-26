@@ -20,7 +20,7 @@ class Car extends Vehicle {
     constructor(make, model, year){
 
         super(make, model, year);
-        
+
     }
 
     numWheels(){
@@ -57,8 +57,8 @@ class Garage {
     add(vehicle){
 
         if(this.vehicles.length !== this.capacity){
+            
             [vehicle.make, vehicle.model, vehicle.year].forEach((val) => {
-
                 if(typeof val !== String || !val) return 'Only vehicles can be here!';
 
             })
@@ -66,15 +66,11 @@ class Garage {
 
                this.vehicles.push([vehicle.make, vehicle.model, vehicle.year]);
                 return 'Parked!' 
-                
+
              }else{
-
                 return 'Only vehicles allowed!!!!';
-
              }
-
         }else{
-
             return 'Garage is FULL!'
         }
 
