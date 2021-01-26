@@ -76,7 +76,7 @@ const findSpotForCol = (x) => {
 }
 
 /** placeInTable: update DOM to place piece into HTML table of board */
-function placeInTable(y, x) {
+const placeInTable= (y, x) => {
 
   // TODO: make a div and insert into correct table cell
   const player = currPlayer === 1 ? 'p1' : 'p2';
