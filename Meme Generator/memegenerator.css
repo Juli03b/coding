@@ -1,0 +1,64 @@
+h1{
+    font-family:  Helvetica, sans-serif;
+    text-align: center;
+    font-size: 5vw;
+    transition: color 1000ms;
+}
+body{
+    background-color: whitesmoke;
+}
+form {    
+    position: absolute;
+    align-items: center;
+    width: 15vw;
+    height: 15vw;
+    }
+form input{
+    background-color: rgb(172, 172, 172);
+    font-family: Helvetica, sans-serif;
+    border: none;
+    /* width: 80%; */
+    font-size: 1.5vmax;
+    margin-bottom: 10%;
+    margin-left: 30px;
+    border-radius: 10px;
+
+}
+.meme-frame{
+    margin: auto;
+    width: 50vw;
+    height: 50vw;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-weight: bold;
+    text-align: center;
+}
+
+.meme-frame p{
+    font-family: Helvetica, sans-serif;
+    position: absolute;
+    text-align: right;
+    margin-left: -1%;
+    font-size: 25px;
+    color: rgb(175, 0, 0);
+
+}
+.top-text{
+    position: absolute;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 5vw;
+    margin-top: -45%;
+    margin-left: 2.5em;
+    -webkit-text-stroke: 2.5px white;
+}
+.bottom-text{
+    position: absolute;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 5vw;
+    margin-top: -15%;
+    margin-left: 2.5em;
+    -webkit-text-stroke: 2.5px white;
+}
+img{
+    height: 100%;
+    width: 100%;
+}

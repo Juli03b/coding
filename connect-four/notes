@@ -1,0 +1,19 @@
+Step One: Planning
+Before looking at our code, take a few minutes to think about how you would build a game like this using HTML/JS/CSS:
+
+what HTML would be useful for the game board itself?
+    A table with trs and tds; the tds could represent every slot.
+how could you represent a played-piece in the HTML board?
+    Another td inside of the played slot. I can add border-radius and background-color to make it look like a game piece;
+in the JavaScript, what would be a good structure for the in-memory game board?
+what might the flow of the game be?
+    Dropping a game piece, then cheking if there is a match somewhere. 
+Then, write down some functions names/descriptions that would be useful for this game.
+createPiece(): checks who's turn it is and creates a piece corresponding to that info. 
+dropPiece(position): this would be triggered using an event listener. It would drop a created piece from createPiece function and place it inside 
+of the board.
+checkScore(): checks if there is a match. Trigger winner if there is.
+winner(): someone won, ask if players would like to restart.
+
+Step Two: ES2015
+This code would benefit from updating to ES2015 style — there are lots of place where var is used that could be changed to either let or const to improve readability. Are there other style fixes you can make?

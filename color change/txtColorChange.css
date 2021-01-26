@@ -1,0 +1,10 @@
+body{
+    background-color: blanchedalmond;
+}
+span{
+    transition: color 1000ms;
+}
+h1{
+    font-size: 50vw;
+    text-align: center;
+}

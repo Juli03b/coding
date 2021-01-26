@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Maker</title>
+    <link rel="stylesheet" href="logomaker.css">
+</head>
+<body>
+    <h1>LOGO MAKER</h1>
+    <form action="" id="logo-form">
+        <label for="brand-name">
+            <input type="text" name="brand-name" placeholder="Brand Name" >
+        </label>
+        <label for="color">
+            Select Color
+            <input type="color" name="color">
+        </label>
+        <label for="font-size">
+            Select font-size
+            <input name="font-size" type="range" min="10" max="300">
+        </label>
+        <input id="submit" type="submit">
+    </form>
+    <section id="logos"></section>
+    <script src="logomaker.js"></script>
+</body>
+</html>
