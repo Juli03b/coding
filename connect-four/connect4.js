@@ -31,7 +31,7 @@ const makeHtmlBoard = () => {
   top.setAttribute("id", "column-top");
   top.addEventListener("click", handleClick);
 
-  // appends a td to the choosing area; the boxes in which to choose a column.
+  // appends a td to the choosing area.
   for (let x = 0; x < WIDTH; x++) {
 
     const headCell = document.createElement("td");
@@ -48,7 +48,7 @@ const makeHtmlBoard = () => {
     const row = document.createElement("tr");
 
     for (let x = 0; x < WIDTH; x++) {
-      // this creates a td; Gives it id of y-x, then appends it to the row. does this for every width.
+      // this creates a td; Gives it id of y-x, then appends it to the row. does this for every 'width'.
       const cell = document.createElement("td");
 
       cell.setAttribute("id", `${y}-${x}`);
@@ -78,7 +78,6 @@ const findSpotForCol = (x) => {
 /** placeInTable: update DOM to place piece into HTML table of board */
 const placeInTable= (y, x) => {
 
-  // TODO: make a div and insert into correct table cell
   const player = currPlayer === 1 ? 'p1' : 'p2';
   const divPiece = document.createElement('div');
   const slot = document.querySelector(`#${CSS.escape(y)}-${CSS.escape(x)}`);
@@ -91,10 +90,12 @@ const placeInTable= (y, x) => {
   }
 
   /** endGame: announce game end */
-  // TODO: pop up alert message
   const endGame = (msg) => {
+
     alert(msg);
+
     top.removeEventListener('click', top);
+
   }
 
   /** handleClick: handle click of column top to play piece */
@@ -108,7 +109,6 @@ const placeInTable= (y, x) => {
   if (y === null) return;
 
   // place piece in board and add to HTML table
-  // TODO: add line to update in-memory board
   board[y][x] = currPlayer;
   placeInTable(y, x);
 
@@ -116,15 +116,14 @@ const placeInTable= (y, x) => {
   if (checkForWin()) return endGame(`Player ${currPlayer} won!`);
 
   // check for tie
-  // TODO: check if all cells in board are filled; if so call, call endGame
   let count = 0;
-
+  
   board.forEach((y, i) => board[i].forEach((x, iX) => (board[i][iX] === 1 || board[i][iX] === 2) ? count++ : null));
-
+  
+  // check if all cells in board are filled; if so call, call endGame
   if(count === WIDTH * HEIGHT) (count = 0, endGame("It's a tie!"));
 
   // switch players
-  // TODO: switch currPlayer 1 <-> 2
   currPlayer === 1 ? currPlayer = 2 : currPlayer = 1;
 
 }
@@ -161,7 +160,7 @@ const checkForWin = () => {
       const vert = [[y, x], [y + 1, x], [y + 2, x], [y + 3, x]];
       const diagDR = [[y, x], [y + 1, x + 1], [y + 2, x + 2], [y + 3, x + 3]];
       const diagDL = [[y, x], [y + 1, x - 1], [y + 2, x - 2], [y + 3, x - 3]];
-      //passes possible combinations to _win, where it's verified 
+      //passes possible combinations to _win, where it's verified.
 
       if (_win(horiz) || _win(vert) || _win(diagDR) || _win(diagDL)) return true;
     }
