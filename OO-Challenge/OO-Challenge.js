@@ -1,6 +1,5 @@
 class Vehicle{
     constructor(make, model, year){
-        // const {make, model, year} = this;
         this.make = make;
         this.model = model;
         this.year = year;
@@ -57,7 +56,7 @@ class Garage {
     add(vehicle){
 
         if(this.vehicles.length !== this.capacity){
-            
+
             [vehicle.make, vehicle.model, vehicle.year].forEach((val) => {
                 if(typeof val !== String || !val) return 'Only vehicles can be here!';
 
