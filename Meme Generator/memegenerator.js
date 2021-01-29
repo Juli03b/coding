@@ -25,8 +25,6 @@ memeForm.addEventListener("submit", function(e){
         topText.textContent  = topTextBox.value
         bottomText.textContent  = bottomTextBox.value 
 
-        imgCanv();
-
         deleteX.textContent = "x"
         deleteX.classList = 'meme-frame p'
         memeFrame.append(deleteX)
@@ -46,18 +44,12 @@ memeForm.addEventListener("submit", function(e){
         for(let textBox of textBoxes){
             textBox.value = ''
         }
+
+        html2canvas(document.querySelector("#meme-frame")).then(canvas => {
+            $('#meme-frame').append(canvas)
+        });
     }
 })
-
-const imgCanv = () =>{
-        html2canvas(memeFrame, {
-          onrendered: function(canvas) {
-            canvas.className = "html2canvas";
-            memesDiv.appendChild(canvas);
-          },
-          useCORS: true
-        });
-}
 
 function randomRGB(){
     return Math.floor(Math.random() * 256);

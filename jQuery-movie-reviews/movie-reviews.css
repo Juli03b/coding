@@ -1,0 +1,74 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+form{
+    margin: auto;
+    margin-left: 20px;
+    display: inline-block;
+    width: 500px;
+    height: 700px;
+    border: black solid 10px;
+    border-radius: 20px;
+}
+form label{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-left: 25px;
+    font-size: 75px;
+    color: gold;
+    font-family: Helvetica, sans-serif;
+    margin-top: 30px;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+
+}
+#title-input, #rating-input{
+    display: flex;
+    margin: auto;
+    height: 6%;
+    width:  300px;
+    text-align: center;
+    border-radius: 30px;
+    margin-bottom: 15px;
+}
+#title-input{
+    margin-top: 20%;
+}
+#submit-review{
+    display: flex;
+    margin: 0 auto;
+    height: 7%;
+    width: 50%;
+    border-radius: 30px;
+    text-align: center;
+}
+table{
+    display: inline-block;
+    height: 700px;
+    position: absolute;
+}
+
+table td{
+    margin-left: 1px;
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+    height: 150px;
+    font-family: Helvetica, sans-serif;
+}
+table td b{
+    color: gold;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+table td button{
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    font-size: 50%;
+    color: red;
+    border-radius: 70px;
+}
+table td button:hover{
+    background-color: red;
+    color:rgb(0, 0, 0);
+}
