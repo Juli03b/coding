@@ -172,7 +172,6 @@ const gameForm = document.querySelector('#game-form');
 gameForm.addEventListener('submit', (evt) => {
   evt.preventDefault()
 
-  console.log(document.querySelector('#p2-input'))
   return new Game(new Player(document.querySelector('#p1-input').value), new Player(colorInputTwo = document.querySelector('#p2-input').value ))
 })
 // [...new Player(document.querySelector("#p+-input").value)]
