@@ -14,26 +14,26 @@ $('#rev').on('click', 'button', function(){
     $(this).parent().remove()
 })
 
-$('div input').eq(0).on('change', function(){
-    if($(this).prop('checked')){
-        //     if($('div input').eq(1).prop('checked') ){
-        //         console.log($('form td'))
-        // }else{
-        //     $('div input').eq(1).text('Sort from A to Z')
+// $('div input').eq(0).on('change', function(){
+//     if($(this).prop('checked')){
+//         //     if($('div input').eq(1).prop('checked') ){
+//         //         console.log($('form td'))
+//         // }else{
+//         //     $('div input').eq(1).text('Sort from A to Z')
             
-        // }
-        sortAlphabetically()
-    }
-})
+//         // }
+//         sortAlphabetically()
+//     }
+// })
 
-const sortAlphabetically = () => {
-    movies.sort((a, b) => {
-        if (a[0].value  > b[0].value) {
-            return -1;
-        }
-        if (b[0].value > a[0].value ) {
-            return 1;
-        }
-        return 0;
-    })
-}
+// const sortAlphabetically = () => {
+//     movies.sort((a, b) => {
+//         if (a[0].value  > b[0].value) {
+//             return -1;
+//         }
+//         if (b[0].value > a[0].value ) {
+//             return 1;
+//         }
+//         return 0;
+//     })
+// }
