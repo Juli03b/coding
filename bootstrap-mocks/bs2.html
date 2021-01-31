@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>Bootstrap practice 2</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand mx-5" href="#">Logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto me-5">
+                <a class="nav-item nav-link active" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+                <a class="nav-item nav-link" href="#">About Us</a>
+                <a class="nav-item nav-link" href="#">Messages
+                    <span class="badge badge-success bg-success">12</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+          <table class="table table-striped">
+              <h1 class="display-5 fw-normal p-3">Dashboard:</h1>
+              <thead>
+                <tr>
+                    <th scope='col'>Name</th>
+                    <th scope='col'>Team</th>
+                    <th scope='col'>All Star</th>
+                    <th scope='col'>Remove</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>Steph</td>
+                    <td>Warriors</td>
+                    <td>Yes</td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Lebron</td>
+                    <td>Cavaliers</td>
+                    <td>Yes</td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Dwayne</td>
+                    <td>Heat</td>
+                    <td>Yes</td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Kobe</td>
+                    <td>Lakers</td>
+                    <td>Yes
+                        <span class="badge badge-pill text-dark bg-warning">Last</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Isaiah</td>
+                    <td>Celtics</td>
+                    <td>Yes
+                        <span class="badge badge-pill bg-success">First</span>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </td>
+                  </tr>
+
+              </tbody>
+          </table>
+          <hr>
+          <h1 class="display-5 fw-normal p-2">To-dos:</h1>
+          <div class="">
+            <div class="alert alert-success border-bottom-0 p-2 mb-0" role="alert">Feel good about bootstrap</div>
+            <div class="alert alert-success border-bottom-0 p-2 mb-0" role="alert">Feel informed about bootstrap</div>
+            <div class="alert alert-warning border-bottom-0 p-2 mb-0" role="alert">Feel warned about bootstrap</div>
+            <div class="alert alert-warning border-bottom-0 p-2 mb-0" role="alert">Maybe I should read the docs...</div>
+            <div class="alert alert-danger border-0 p-2 mb-0" role="alert">Danger Zone</div>
+            <div class="alert alert-danger p-2 m-0 mb-3" role="alert">I really should read the docs...</div>
+           </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
