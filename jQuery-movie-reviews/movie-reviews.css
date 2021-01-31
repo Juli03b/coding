@@ -2,19 +2,20 @@ body{
     background-color: rgb(255, 255, 255);
 }
 form{
-    margin: auto;
+    /* margin: auto;
     margin-left: 20px;
-    display: inline-block;
+    display: inline-block; */
+    margin:10px 10px 10px 10px;
     width: 500px;
     height: 700px;
-    border: black solid 10px;
+    border: black solid 5px;
     border-radius: 20px;
 }
 form label{
-    display: flex;
+    /* display: flex;
     margin: auto;
     text-align: center;
-    margin-left: 25px;
+    margin-left: 25px; */
     font-size: 75px;
     color: gold;
     font-family: Helvetica, sans-serif;
@@ -23,8 +24,8 @@ form label{
 
 }
 #title-input, #rating-input{
-    display: flex;
-    margin: auto;
+    /* display: flex;
+    margin: auto; */
     height: 6%;
     width:  300px;
     text-align: center;
@@ -32,43 +33,39 @@ form label{
     margin-bottom: 15px;
 }
 #title-input{
-    margin-top: 20%;
+    /* margin-top: 20%; */
 }
 #submit-review{
-    display: flex;
-    margin: 0 auto;
+    /* display: flex;
+    margin: 0 auto; */
     height: 7%;
     width: 50%;
     border-radius: 30px;
     text-align: center;
 }
-table{
-    display: inline-block;
-    height: 700px;
-    position: absolute;
-}
 
-table td{
+
+/* #review-div{
     margin-left: 1px;
     font-size: 25px;
     text-align: center;
     width: 250px;
     height: 150px;
     font-family: Helvetica, sans-serif;
-}
-table td b{
+} */
+.col-3.movie-review b{
     color: gold;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
-table td button{
-    height: 25px;
+.col-3.movie-review button{
+    height: 10px;
     width: 25px;
     display: inline-block;
     font-size: 50%;
     color: red;
-    border-radius: 70px;
+    border-radius: 5px;
 }
-table td button:hover{
+.col-3.movie-review:hover{
     background-color: red;
     color:rgb(0, 0, 0);
 }

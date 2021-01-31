@@ -12,6 +12,7 @@ class Game{
       
       this.p1 = p1.color ? this.p1 = p1 : {color : 'red'};
       this.p2 = p2.color ? this.p2 = p2 : {color : 'blue'}
+      // otherPlayers ? otherPlayers.forEach((p) => this[p] = p) : null;
 
       this.currPlayer = this.p1; // active player: 1 or 2
       
@@ -172,5 +173,6 @@ gameForm.addEventListener('submit', (evt) => {
   evt.preventDefault()
 
   console.log(document.querySelector('#p2-input'))
-  return new Game(new Player(document.querySelector('#p1-input').value), new Player(colorInputTwo = document.querySelector('#p2-input').value))
+  return new Game(new Player(document.querySelector('#p1-input').value), new Player(colorInputTwo = document.querySelector('#p2-input').value ))
 })
+// [...new Player(document.querySelector("#p+-input").value)]

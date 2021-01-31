@@ -2,19 +2,34 @@
 <head>
   <title>Connect 4</title>
   <link href="connect4.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-  <form id='game-form'>
-    <label for="p1">Color for Player One</label>
-      <input type="text" name="p1" id="p1-input" placeholder="Color">
-    <label for="p2">Color for Player Two</label>
-      <input type="text" name="p2" id="p2-input" placeholder="Color">
-    <input type="submit" value="START GAME" >
-  </form>
-<div id="game">
-  <table id="board"></table>
+<div class="container-fluid">
+  <div class="row">
+    <form id='game-form' class="row">
+      <div class="col-2 form-group">
+          <label for="p1" class=" form-label" >Color for Player One</label>
+          <input type="text" name="p1" id="p1-input" placeholder="Color for P1" class="form-control">
+      </div>
+      <div class="col-2 form-group">
+          <label for="p2"  class=" form-label" >Color for Player Two</label>
+          <input type="text" name="p2" id="p2-input" placeholder="Color for P2" class="form-control">
+      </div>
+    <!-- <label for="p+"  class="form-label" >Color for Extra Player</label>
+      <input type="text" name="p+" id="p+-input" placeholder="Color for P" class="col-6 col-sm-3"> -->
+      <div class="col-2 form-group">
+          <label for="start-game" class="form-label"></label>
+          <input type="submit" value="START GAME" name='start-game' class="form-control btn btn-secondary">
+      </div>
+    </form>
+  </div>
+</div>
+<div id="game" class="m-2">
+  <table id="board"  class="table table-striped"></table>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src="connect4.js"></script>
 
 </body>

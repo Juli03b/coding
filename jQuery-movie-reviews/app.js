@@ -4,11 +4,13 @@ $('form').on('submit', function(e){
     const titleInput = $('#title-input'), ratingInput = $('#rating-input'), tableRow = $('table tr');
     if(titleInput.val() && ratingInput.val()){
         movies.push([titleInput[0] , ratingInput[0]]);
-        $('table tr').append(`<td class= movie-review > <button>x</button> Title: ${titleInput.val()} Rating: <b>${ratingInput.val()}<b></td>`)
+        $('#rev').append(`<div class = 'col.movie-review d-inline'> <button>x</button> Title: ${titleInput.val()} Rating: <b>${ratingInput.val()}<b></div>`)
     }
 })
 
-$('table').on('click', 'button', function(){
+
+
+$('.col-3.movie-review').on('click', 'button', function(){
     $(this).parent().remove()
 })
 
