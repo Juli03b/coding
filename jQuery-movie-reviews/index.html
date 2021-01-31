@@ -9,14 +9,17 @@
 </head>
 <body>
 <div class="container-fluid">
-
-        <div class="row">
-            <form class="col-4">
-                <label for="rating">Rate a Movie</label>
-                <input class="" type="text" name="movie-title" id="title-input" placeholder="Movie Name" maxlength="20" minlength="2">
-                <input class='' type="number" name="movie-rating" id="rating-input" min='0' max="10" placeholder="Movie Rating">
-                <input class='' type="submit" value="Submit Review" id='submit-review'>
-            </form>
+    <div class="row">
+        <form class="col-4 mt-3">
+            <h1 for="rating" class="display-1">Rate a Movie</h1>
+                <div class="form-group mt-8">
+                        <div class="align-bottom">
+                            <input class="form-control" type="text" name="movie-title" id="title-input" placeholder="Movie Name" maxlength="20" minlength="2">
+                            <input class='form-control' type="number" name="movie-rating" id="rating-input" min='0' max="10" placeholder="Movie Rating">
+                            <input class='form-control' type="submit" value="Submit Review" id='submit-review'>
+                        </div>
+                </div>
+        </form>
         
 
     <!-- <div>
@@ -26,7 +29,7 @@
     </div> -->
 
         <div id='review-div' class="col">
-            <div id='rev' class="row"></div>
+            <div id='rev' class=""></div>
         </div>
 
 

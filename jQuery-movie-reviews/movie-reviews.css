@@ -7,15 +7,15 @@ form{
     display: inline-block; */
     margin:10px 10px 10px 10px;
     width: 500px;
-    height: 700px;
+    height: 500px;
     border: black solid 5px;
     border-radius: 20px;
 }
-form label{
-    /* display: flex;
+/* form label{
+    display: flex;
     margin: auto;
     text-align: center;
-    margin-left: 25px; */
+    margin-left: 25px;
     font-size: 75px;
     color: gold;
     font-family: Helvetica, sans-serif;
@@ -24,8 +24,8 @@ form label{
 
 }
 #title-input, #rating-input{
-    /* display: flex;
-    margin: auto; */
+    display: flex;
+    margin: auto;
     height: 6%;
     width:  300px;
     text-align: center;
@@ -33,17 +33,17 @@ form label{
     margin-bottom: 15px;
 }
 #title-input{
-    /* margin-top: 20%; */
+    /* margin-top: 20%;
 }
 #submit-review{
     /* display: flex;
-    margin: 0 auto; */
+    margin: 0 auto; 
     height: 7%;
     width: 50%;
     border-radius: 30px;
     text-align: center;
 }
-
+ 
 
 /* #review-div{
     margin-left: 1px;
@@ -53,11 +53,11 @@ form label{
     height: 150px;
     font-family: Helvetica, sans-serif;
 } */
-.col-3.movie-review b{
+/* .col-3.movie-review b{
     color: gold;
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
-.col-3.movie-review button{
+.movie-review button{
     height: 10px;
     width: 25px;
     display: inline-block;
@@ -68,4 +68,4 @@ form label{
 .col-3.movie-review:hover{
     background-color: red;
     color:rgb(0, 0, 0);
-}
+} */
