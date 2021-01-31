@@ -15,7 +15,7 @@
 /* pieces are div within game table cells: draw as colored circles */
 
 .piece {
-  margin: 5px;
+  margin: 10%;
   width: 80%;
   height: 80%;
   border-radius: 50%;
