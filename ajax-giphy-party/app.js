@@ -28,6 +28,6 @@ $('#rnd-gif-btn').on('click', async function(e){
   appendGif(res.data.data.images.original.url);
 })
 
-$("#clear-btn").on('click', async function(e){
+$("#clear-btn").on('click', function(e){
   $('#gif-div').html('')
 })
