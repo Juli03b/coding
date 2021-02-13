@@ -1,3 +1,0 @@
-It took me three Hours to add an image to the img element and put text over it. 
-It took me two more hours to add delete and multiple meme feature.
-Total time: 5 hours
