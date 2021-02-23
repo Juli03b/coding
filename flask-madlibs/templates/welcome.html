@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %} Welcome {% endblock %}
+
+{% block content %} 
+
+<div class="col-3 p-1 mx-auto">
+    <form action="/story">
+        <label for="story-choice">Choose a story</label>
+            <select name="story-choice" class="w-25">
+                <option>Random</option>
+                {% for story in stories %}
+                <option> {{story.template}}</option>
+                {% endfor %}
+            </select>
+        <hr>
+        <label for="place" class="form-label fw-bold">Place:</label>
+            <input type="text" class="form-control p-1 mb-2" name="place" placeholder="Name" minlength="3" required>
+        <label for="adjective" class="form-label fw-bold">Adjective:</label>
+            <input type="text" class="form-control p-1 mb-2" name="adjective" placeholder="Adjective" minlength="3" required>
+        <label for="noun" class="form-label fw-bold">Noun:</label>
+            <input type="text" class="form-control p-1 mb-2" name="noun" placeholder="Noun" minlength="3" required>
+        <label for="plural_noun" class="form-label fw-bold">Plural-Noun:</label>
+            <input type="text" class="form-control p-1 mb-2" name="plural_noun" placeholder="Plural Noun" minlength="3" required>
+        <label for="verb" class="form-label fw-bold">Verb:</label>
+            <input type="text" class="form-control p-1 mb-2" name="verb" placeholder="Verb" minlength="3" required>
+        <button type="submit" class="btn btn-outline-secondary form-control mt-2">SUBMIT!</button>
+    </form>
+</div>
+{% endblock %}
