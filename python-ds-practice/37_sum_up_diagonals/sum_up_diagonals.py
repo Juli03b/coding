@@ -22,8 +22,7 @@ def sum_up_diagonals(matrix):
     idx = (len(matrix) - 1)
     
     for num in range(len(matrix)):
-        summed += matrix[num][num]
-        summed += matrix[num][idx]
+        summed += matrix[num][num] + matrix[num][idx]
         idx -= 1
 
     return summed

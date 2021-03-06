@@ -17,10 +17,8 @@ def three_odd_numbers(nums):
     three_count = 0
     odds = [num for num in nums if not num % 2 == 0]
 
-    for i in range(len(nums)):
+    for i in range(len(nums) - 2):
         arr = nums[i:i + 3]
-        if len(arr) < 3:
-            break
         summ = sum(arr)
         if summ % 2:
             return True
