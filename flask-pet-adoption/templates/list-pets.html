@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for cat, msg in messages %}
+                {% if cat == 'success' %}
+                <div class="alert alert-success" role="alert">
+                    {{msg}}
+                </div>
+                {% endif %}
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    {% if pets %}
+        <ul class="list-group list-group-horizontal list-unstyled">
+        {% for pet in pets %}
+            <li class="">
+                <a href="/{{pet.id}}" class="list-group-item list-group-item-action flex-fill">
+                    <h6 class="fs-3">{{pet.name}}</h6>
+                    <img src="{{pet.photo_url}}" height="150" width="150" class="d-block rounded">
+                    {% if pet.available %}
+                        <small class="text-success">{{pet.name}}<small class="text-dark"> is Available</small></small>
+                    {% else %}    
+                        <small class="text-danger">{{pet.name}}<small class="text-dark"> is Not Available</small>
+                        {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+
+    <a href="/add" class="btn btn-sm btn-success my-3">Add a Pet</a>
+</div>
+{% endblock %}
