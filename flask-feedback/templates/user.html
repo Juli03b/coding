@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="fs-1">{{user.full_name}}
+        <form action="/users/{{user.username}}/delete" method="POST" class="d-inline">
+            <button class="fas fa-trash small bg-transparent border-0"></button>
+        </form>
+    </h1>
+    <p class="lead"><b>Username: </b>{{user.username}}</p>
+    <p class="lead"><b>Email: </b>{{user.email}}</p>
+    <h6 class="fs-3">Feedback:</h6>
+    {% include 'list-feedback.html' %}
+    <a href="/users/{{user.username}}/feedback/add" class="btn btn-outline-primary">Add feedback</a>
+{% endblock %}

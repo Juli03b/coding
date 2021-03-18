@@ -1,0 +1,15 @@
+{% with feedback = user.feedback %}
+    {% if feedback %}
+        <ul class="list-group">
+        {% for fb in feedback %}
+                <h6>{{fb.title}} <a class="text-reset fas fa-edit text-dark d-inline" href="/feedback/{{fb.id}}/update"></a>
+                    <form action="/feedback/{{fb.id}}/delete" method="POST" class="d-inline">
+                        <button class="fas fa-trash small bg-transparent border-0"></button>
+                    </form>
+                </h6>
+                <p class="lead">{{fb.content}}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
