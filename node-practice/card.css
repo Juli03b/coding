@@ -1,0 +1,9 @@
+.game-card{
+    max-width: 800px;
+    max-height: 1050px;
+    position: absolute;
+    right: 450px;
+    top: -200px;
+    overflow: hidden;
+    z-index: -1;
+}
