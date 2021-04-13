@@ -44,7 +44,7 @@ async function appendFourFavNumFacts(num){
     let facts = [];
 
     for (let i = 0; i < 4; i++){
-        facts.push(axios.get(`http://numbersapi.com/2?json`))
+        facts.push(axios.get(`http://numbersapi.com/${num}?json`))
     }
 
     facts = await Promise.all(facts)
