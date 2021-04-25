@@ -1,0 +1,16 @@
+{
+  "name": "markov",
+  "version": "1.0.0",
+  "description": "Markov project. Use Markov chains to return machine-made text.",
+  "main": "makeText.js",
+  "scripts": {
+    "test": "markov.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "html-to-text": "^7.1.1",
+    "jest": "^26.6.3"
+  }
+}
