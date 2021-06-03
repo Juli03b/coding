@@ -1,0 +1,8 @@
+li {
+    border-bottom-style: solid;
+    display: inline-block;
+    border: inline-block black;
+    border-right: solid;
+    padding: 10px;
+    text-transform: capitalize;
+}
