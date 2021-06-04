@@ -1,0 +1,21 @@
+#Eight-Ball {
+    height: 1000px;
+    width: 1100px;
+    border-radius: 48%;
+    text-align: center;
+    -webkit-text-stroke-width: thin;
+}
+#Eight-Ball-Msg {
+    top: 350px;
+    left: 350px;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+}
+
+button {
+    position: absolute;
+    padding: 10px;
+    top: 8px;
+    left: 525px
+}
