@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match snapshots 1`] = `
+<DocumentFragment>
+  <li>
+    <p
+      data-testid="todo"
+    />
+    <button>
+      X
+    </button>
+  </li>
+</DocumentFragment>
+`;
