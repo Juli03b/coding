@@ -1,0 +1,10 @@
+a.names {
+    display: block;
+    font-variant: all-petite-caps;
+}
+div.dogs {
+    margin: 2.5rem;
+}
+div.dogs img {
+    border: solid 3.5px;
+}

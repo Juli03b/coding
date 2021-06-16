@@ -1,0 +1,6 @@
+div.Color {
+    height: 63rem;
+}
+h1.ColorHeader {
+    text-transform: capitalize;
+}
