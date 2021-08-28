@@ -21,7 +21,7 @@ function everyOther(string, index=0) {
 }
 
 /** isPalindrome: checks whether a string is a palindrome or not. */
-
+// NEEDS FIX!
 function isPalindrome(str, index=str.length - 1) {
   if(index < 1) return str[index];
   return str[index] + isPalindrome(str, index - 1) === str;
