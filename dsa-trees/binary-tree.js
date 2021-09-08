@@ -64,8 +64,7 @@ class BinaryTree {
     let currentMaxDepth = 0; 
 
     while(nodeStack.length){
-      const [currentNode, depth] = nodeStack.pop();
-      const {left, right} = currentNode;
+      const [{left, right}, depth] = nodeStack.pop();
 
       // If node is a leaf node and node stack is exhausted, return max depth. 
       if(!left && !right && !nodeStack.length) return currentMaxDepth;
@@ -78,65 +77,50 @@ class BinaryTree {
   }
 
   /** maxSum(): return the maximum sum you can obtain by traveling along a path in the tree.
-   * The path doesn't need to start at the root, but you can't visit a node more than once. */
+   * The path doesn't need to start at the root, but you can't visit a node more than once.
+   * 
+   * Idea:
+   *  Do dfs, add nodes to the stack with the current node's sum plus left and/or right value.
+   *  
+   *  NOT COMPLETE: Does not handle negative values.
+   */
 
   maxSum() {
-    console.log("****************** NEXT RUN ********************")
-    const nodeStack = [this.root]
-    let currentSum = 0;
-    let biggestSum = 0;
-    let left = true;
+    if(!this.root) return 0;
+
+    // Store nodes with their sums, because we could traverse opposite sides
+    const nodeStack = [[this.root, this.root.val]];
+    let currentMaxSum = 0; 
 
     while(nodeStack.length){
-      const currentNode = nodeStack.pop();
-      console.log("current node", currentNode)
-      if(currentNode) {
-        currentSum += currentNode.val;
-        if(left){
-          if(currentNode.left){
-            nodeStack.push(currentNode.left)
-            currentSum += currentNode.val;
-          }else{
-            if(biggestSum < currentSum) biggestSum = currentSum;
-            left = false;
-          }
-        }else{
-          currentSum = currentNode.val;
+      const [{left, right, val}, currentSum] = nodeStack.pop();
 
-          if(currentNode.right){
-            nodeStack.push(currentNode.right)
-            currentSum += currentNode.val;
-          }else{
-            if(biggestSum < currentSum) biggestSum = currentSum;
-            left = true;
-          }
-        }
-      };
+      if(!left && !right && currentSum > currentMaxSum) currentMaxSum = currentSum;
+      if(!left && !right && !nodeStack.length) return currentMaxSum + val;
+
+      if(left) nodeStack.push([left, left.val + currentSum])
+      if(right) nodeStack.push([right, right.val + currentSum])
     }
-    return biggestSum;
   }
 
   /** nextLarger(lowerBound): return the smallest value in the tree
-   * which is larger than lowerBound. Return null if no such value exists. */
+   * which is larger than lowerBound. Return null if no such value exists. 
+   * */
 
   nextLarger(lowerBound) {
-    console.log("****************OG TREE*****************")
-    console.log(this.root)
-    console.log("****************OG TREE*****************")
-
+    if(!this.root) return null;
     const nodeStack = [this.root];
-    let lowest = 0;
+    let lowest = this.root.val;
     
     while(nodeStack.length){
-      console.log("nodeStack", nodeStack)
-      const currentNode = nodeStack.pop();
-      if(!currentNode) return null;
-      if(currentNode.val > lowerBound && lowest < currentNode.val) lowest = currentNode.val;
-      if(currentNode.left) nodeStack.push(currentNode.left);
-      if(currentNode.right) nodeStack.push(currentNode.right);
+      const {left, right, val} = nodeStack.pop();
+
+      if(val < lowest && val > lowerBound) lowest = val;
+      if(right) nodeStack.push(right);
+      if(left) nodeStack.push(left);
     }
 
-    return lowest;
+    return lowest > lowerBound ? lowest : null;
   }
 
   /** Further study!
@@ -144,7 +128,27 @@ class BinaryTree {
    * (i.e. are at the same level but have different parents. ) */
 
   areCousins(node1, node2) {
+    if(!node1 || !node2) return;
 
+    const nodeStack = [[this.root, 1, this.root]];
+
+    while(nodeStack.length){
+      const [currentNode, depth, parentNode] = nodeStack.pop();
+      const {left, right} = currentNode;
+
+      if(currentNode === node1){
+        node1.depth = depth;
+        node1.parent = parentNode;
+      }else if(currentNode === node2) {
+        node2.depth = depth;
+        node2.parent = parentNode;
+      }
+
+      if(right) nodeStack.push([right, depth + 1, currentNode]);
+      if(left) nodeStack.push([left, depth + 1, currentNode]);
+    }
+
+    return (node1.depth === node2.depth) && (node1.parent !== node2.parent) ;
   }
 
   /** Further study!
