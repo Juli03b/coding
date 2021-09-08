@@ -49,38 +49,32 @@ class BinaryTree {
   }
 
   /** maxDepth(): return the maximum depth of the tree -- that is,
-   * the length of the longest path from the root to a leaf. */
-
+   * the length of the longest path from the root to a leaf. 
+   * 
+   * Idea:
+   *  DFS. Make a stack, store nodes with a depth value in an array. Keep traversing.
+   *  Add nodes to the stack with current node depth, plus 1
+   * */
+  
   maxDepth() {
-    const nodeStack = [this.root]
-    let currentLength = this.root ? 1 : 0;
-    let longestLength = currentLength;
-    let left = true;
+    if(!this.root) return 0;
+
+    // Store nodes with their depth, because we could traverse opposite sides
+    const nodeStack = [[this.root, 1]];
+    let currentMaxDepth = 0; 
 
     while(nodeStack.length){
-      const currentNode = nodeStack.pop();
+      const [currentNode, depth] = nodeStack.pop();
+      const {left, right} = currentNode;
 
-      if(!currentNode) return longestLength;
-      if(left){
-        if(currentNode.left){
-          nodeStack.push(currentNode.left)
-          currentLength += 1;
-        }else{
-          if(longestLength < currentLength) longestLength = currentLength;
-          left = false;
-        }
-      }else{
-        nodeStack.push(this.root);
-        if(currentNode.right){
-          nodeStack.push(currentNode.right)
-          currentLength += 1;
-        }else{
-          if(longestLength < currentLength) longestLength = currentLength;
-          left = true;
-        }
-      }
+      // If node is a leaf node and node stack is exhausted, return max depth. 
+      if(!left && !right && !nodeStack.length) return currentMaxDepth;
+      // Else, if leaf node, set max depth to current depths
+      if(!left && !right) currentMaxDepth = depth
+
+      if(right) nodeStack.push([right, depth + 1]);
+      if(left) nodeStack.push([left, depth + 1]);
     }
-    return longestLength;
   }
 
   /** maxSum(): return the maximum sum you can obtain by traveling along a path in the tree.
